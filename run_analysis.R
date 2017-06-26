@@ -10,7 +10,7 @@
 
 ## Download the data, unzip it, and set working directory to the extracted folder
 download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip','smartphone.zip','curl')
-DateDownloaded = Sys.Date()
+DateDownloaded <- Sys.Date()
 unzip('smartphone.zip')
 setwd('./UCI HAR Dataset')
 
