@@ -1,7 +1,13 @@
 # CleaningDataCourseProject
 
-The script run_analysis.R downloads accelerometer data from Galaxy smartphones to the current working directory, then prepares two(2) 
-data.frame objects named df and aggdf:
+The script run_analysis.R reshapes accelerometer data from Galaxy smartphones (found in the directory 'UCI HAR Dataset') into two(2) 
+data.frame objects named 'df' and 'aggdf', described below. 
+(NOTE: The following R code will download and prepare the proper directory and data [as of 06/26/2017]:
+  > download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip','smartphone.zip','curl')
+  > DateDownloaded <- Sys.Date()
+  > unzip('smartphone.zip')
+  > setwd('./UCI HAR Dataset')
+)
 
 df is a data.frame with 10,299 observations of 69 variables.
   Each observation consists of a subject noted by 'subject_id', 66 various measurements from the subject's smartphone's accelerometer,
