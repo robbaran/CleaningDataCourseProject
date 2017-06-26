@@ -2,10 +2,10 @@
 ## It createses two data.frame objects: df and aggdf.
 ## df contains all training and test data from the dataset, 
 ##   and its columns contain all mean() and std() measurments for x,
-##   as well as outputs y (with descriptive labels ),
+##   as well as outputs y (with descriptive labels),
 ##   and each subject's id number.
 ##
-## agdf sumamrizes the data in df by grouping by subject and activity, returning
+## aggdf sumamrizes the data in df by grouping by subject and activity, returning
 ##  the mean of each measurement
 
 ## Download the data, unzip it, and set working directory to the extracted folder
