@@ -1,19 +1,19 @@
 # CleaningDataCourseProject
 
-The script run_analysis.R reshapes accelerometer data from Galaxy smartphones (found in the directory 'UCI HAR Dataset') into two(2) 
-data.frame objects named 'df' and 'aggdf', described below. 
-(NOTE: The following R code will download and prepare the proper directory and data [as of 06/26/2017]:
+The script run_analysis.R reshapes accelerometer data from Galaxy smartphones (found in the 'UCI HAR Dataset' subdirectory
+of the working directory) into two data.frame objects named 'df' and 'aggdf', described below. 
+
+NOTE: run_analysis.R requires the directory 'UCI HAR Dataset' to be in the working directory.
+  Run the following R code (on MAC OS) to download and unzip the necessary data, creating the directory 'UCI HAR Dataset':
   > download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip','smartphone.zip','curl')
   > DateDownloaded <- Sys.Date()
   > unzip('smartphone.zip')
-  > setwd('./UCI HAR Dataset')
-)
 
 df is a data.frame with 10,299 observations of 69 variables.
   Each observation consists of a subject noted by 'subject_id', 66 various measurements from the subject's smartphone's accelerometer,
   and a label indicating the activity in which the subject was engaged during the measurements (denoted by 'activity' and 'activity_code').
-  The 66 measurements in df are a subset of the total 561 measurements available from the data source, corresponding to 
-  mean values or standard deviations as noted by 'mean()' and std()', respectively, in the files features.txt and features_info.txt.
+  The 66 measurements in df are a subset of the total 561 measurements available from the data source, corresponding to only the
+  mean values or standard deviations of measurements. These are noted with 'mean()' and std()', respectively, in the files features.txt and features_info.txt.
   
 aggdf is a data.frame with 180 observations and 68 variables.
   The first two columns of aggdf denote an activity and subject_id and the last 66 columns correspond to smartphone measurements 
