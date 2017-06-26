@@ -38,5 +38,5 @@ aggdf <- aggregate(df, by=list(df$subject_id, df$activity), FUN="mean")
 #drop original activity column (NAs after attempting to take their average)
 #and drop Group.1 column (equivalent to subject_id)
 aggdf <- aggdf[,c(2,4:(length(aggdf)-1))]
-#and rename the Group1 to subject_id, and Group2 to activity
+#rename Group1 to subject_id, and Group2 to activity
 names(aggdf)[1] <- c('activity')
