@@ -5,9 +5,9 @@ of the working directory) into two data.frame objects named 'df' and 'aggdf', de
 
 NOTE: run_analysis.R requires the directory 'UCI HAR Dataset' to be in the working directory.
   Run the following R code (on MAC OS) to download and unzip the necessary data, creating the directory 'UCI HAR Dataset':
-  > download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip','smartphone.zip','curl')
-  > DateDownloaded <- Sys.Date()
-  > unzip('smartphone.zip')
+    download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip','smartphone.zip','curl')
+    DateDownloaded <- Sys.Date()
+    unzip('smartphone.zip')
 
 df is a data.frame with 10,299 observations of 69 variables.
   Each observation consists of a subject noted by 'subject_id', 66 various measurements from the subject's smartphone's accelerometer,
